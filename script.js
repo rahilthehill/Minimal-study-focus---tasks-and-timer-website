@@ -65,6 +65,7 @@ const taskList = [ // task list array, all timing is in mins
       
       //when skip pressed or time elapsed it goes to next task
       function displayNextTask() {
+        playBeep()
         taskIndex++;
         if (taskIndex < taskList.length) {
           displayTask(taskList[taskIndex]);
@@ -77,12 +78,14 @@ const taskList = [ // task list array, all timing is in mins
       
       // called in the end, skip button, with green feedback styling
       function init() {
+        playBeep()
         displayTask(taskList[0]);
         startTimer(getDuration(taskList[0]), document.getElementById("timer"));
         setInterval(displayClock, 1000);
       
         const skipBtn = document.getElementById("skip-btn");
         skipBtn.addEventListener("click", () => {
+          playBeep()
           clearInterval(timerId);
           displayNextTask();
           document.body.style.backgroundColor = "#0f0";
@@ -92,6 +95,31 @@ const taskList = [ // task list array, all timing is in mins
         });
       }
       
+      function hide() {
+        //hide element h2
+        document.getElementById("h2");
+        if (h2.style.opacity === "0") {
+          h2.style.opacity = "1";
+        } else {
+          h2.style.display = "0";
+      }
+    }
 
+    function toggleFullScreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen(); 
+        }
+      }
+    }
+
+    function playBeep() {
+      const audio = new Audio('sound-effect.mp3');
+      audio.play();
+    }
+    
+    
       init();
       

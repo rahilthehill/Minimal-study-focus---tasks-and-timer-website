@@ -22,7 +22,7 @@ body {
   }
   
   #timer {
-    font-size: 5rem;
+    font-size: 10rem;
     margin-bottom: 2rem;
   }
   
@@ -31,22 +31,30 @@ body {
     top: 1rem;
     right: 1rem;
     font-size: 1.5rem;
+    color: rgb(183, 183, 183);
   }
   
   #skip-btn {
     margin-top: 2rem;
     padding: 1rem 2rem;
     background-color: transparent;
-    border: 2px solid #fff;
-    border-radius: 1rem;
+    border: 2px solid #909090;
+    border-radius: 0.5rem;
     font-size: 1.2rem;
-    color: #fff;
+    color: #908f8f;
     cursor: pointer;
+    opacity: 0.1;
+    transition: all 0.5s ease-in-out;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
   
   #skip-btn:hover {
-    background-color: #0f0;
-    transition: background-color 0.3s ease;
+    background-color: rgba(17, 187, 17, 0.88);
+    opacity: 1;
+    border: 2px solid rgb(66, 66, 66);
+    color: #292929;
+    transition: all 0.5s ease-in-out;
+    border-radius: 1rem;
   }
   
   .show {

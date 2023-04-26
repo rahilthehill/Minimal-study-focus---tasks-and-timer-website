@@ -1,0 +1,56 @@
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: "Circular Std Book", sans-serif;
+  }
+  
+  #container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  #task {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  #timer {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+  }
+  
+  #clock {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  #skip-btn {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  #skip-btn:hover {
+    background-color: #0f0;
+    transition: background-color 0.3s ease;
+  }
+  
+  .show {
+    display: block;
+  }
+  
+  

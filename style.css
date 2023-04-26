@@ -2,6 +2,7 @@ body {
     background-color: #000;
     color: #fff;
     font-family: "Circular Std Book", sans-serif;
+    transition: all 0.5s ease-in-out;
   }
   
   #container {
@@ -21,19 +22,22 @@ body {
   }
 
   h2 {
+    width: 50%;
+    margin:auto;
     font-size: 0.5rem;
    padding: 2rem;
-    opacity: 0.09;
+    opacity: 0.3;
     transition: all 0.5s ease-in-out;
   }
 
   h2:hover {
-  font-size: 2rem;
-   padding: 3rem;
+  font-size: 1rem;
   opacity: 0.9;
-  
+
     transition: all 1s ease-in-out;
   }
+
+  
   
   #task {
     font-size: 2rem;
@@ -86,4 +90,80 @@ body {
     display: block;
   }
   
+  /* phone support */
+  @media only screen and (max-width: 600px) {
+    #container {
+      padding: 0.5rem;
+    }
+    
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      padding: 0.5rem;
+    }
+    
+    #task {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      padding: 2rem;
+    }
+    
+    #timer {
+      font-size: 5rem;
+      margin-bottom: 1rem;
+      padding: 2rem;
+    }
+    
+    #clock {
+      top: 0.5rem;
+      right: 0.5rem;
+      font-size: 1rem;
+    }
+    
+    #skip-btn {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border-radius: 0.3rem;
+    }
+  }
   
+  #skip-btn1 {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    border: 2px solid #909090;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    color: #908f8f;
+    cursor: pointer;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
+  #skip-btn1:hover {
+    background-color: rgba(17, 187, 17, 0.88);
+    opacity: 1;
+    border: 2px solid rgb(66, 66, 66);
+    color: #292929;
+    transition: all 0.5s ease-in-out;
+    border-radius: 1rem;
+  }
+
+ 
+  /* // */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    border: #fff solid 2px;
+    border-radius: 2rem;
+    opacity: 0.8;
+  }
+  th, td {
+    text-align: left;
+    padding: 8px;
+    border: #ffffff solid 2px;
+    border-radius: 2rem;
+    opacity: 0.8;
+  }

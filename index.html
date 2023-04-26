@@ -8,13 +8,47 @@
   </head>
   <body>
     <div id="container">
-      <h1 onclick="toggleFullScreen()" >Study Schedule</h1> 
-      <div id="task">Click to fullscreen</div>
-      <div id="timer"></div>
-      <div id="clock"></div>
-      <button id="skip-btn">Skip</button>
+      <h1>Classic Pomodoro v1</h1> 
+      <table>
+        <thead>
+          <tr>
+            <th>Session</th>
+            <th>Duration</th>
+          </tr>
+        </thead>
+        <tbody id="taskTable">
+        </tbody>
+      </table>
+
+
+      <button id="skip-btn1" onclick="loadMain()">Start</button>
     </div>
-    <h2 id:"h2">Work in progress - For personal use only, Public version that people can use and customize coming soon... Made by @morerahilj (Insta) *Btw click the "study schedule" title to enter fullscreen. Full focus mode. *</h2> 
+
+    <h2 id="about" onclick="hide()">Work in progress - For personal use only, Public version that people can use and customize coming soon... Made by @morerahilj (Insta) *Btw click the "study schedule" title to enter fullscreen. Full focus mode. *</h2> 
     <script src="script.js"></script>
+    <script>
+      const taskList1 = [
+        { task: "Pomodoro 1 - Paper 1 Questions - Focus on answering 10 paper 1 questions with no distractions", duration: 25 },
+        { task: "Short Break - Take a 10-minute break to rest, stretch, or grab a snack", duration: 10 },
+        { task: "Pomodoro 2 - Paper 1 Questions - Focus on answering another 10 paper 1 questions with no distractions", duration: 25 },
+        { task: "Short Break - Take a 10-minute break to rest, stretch, or do something you enjoy", duration: 10 },
+        { task: "Pomodoro 3 - Paper 1 Questions - Focus on answering another 10 paper 1 questions with no distractions", duration: 25 },
+        { task: "Short Break - Take a 15-minute break to rest, stretch, or do something you enjoy", duration: 15 },
+        { task: "Pomodoro 4 - Revision/Paper 3 Questions - Focus on answering as many questions as possible within the hour, with no distractions", duration: 60 },
+        { task: "Short Break - Take a 10-minute break to rest, stretch, or do something you enjoy", duration: 10 },
+        { task: "Pomodoro 5 - Revision/Paper 3 Questions - Focus on answering as many questions as possible within the 30 minutes, with no distractions", duration: 30 },
+        { task: "Personal Time - Use this time to watch a show or YouTube video, relax, or do something you enjoy", duration: 30 },
+      ];
+  
+      const table = document.getElementById('taskTable');
+  
+      taskList1.forEach(task => {
+        const row = table.insertRow();
+        const taskCell = row.insertCell(0);
+        const durationCell = row.insertCell(1);
+        taskCell.innerHTML = task.task;
+        durationCell.innerHTML = task.duration + ' minutes';
+      });
+    </script>
   </body>
 </html>

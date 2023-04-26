@@ -87,7 +87,7 @@ const taskList = [
           displayTask(taskList[taskIndex]);
           startTimer(getDuration(taskList[taskIndex]), document.getElementById("timer"));
         } else {
-          displayTask({ task: "You're done!", duration: 0 });
+          displayTask({ task: "🎉 You're done! 🎉", duration: 0 });
           document.getElementById("timer").textContent = "00:00";
           document.body.style.backgroundColor = "#0f0";
         }
@@ -141,6 +141,10 @@ const taskList = [
 
     function loadMain() {
       window.location.href = "main.html";
+    }
+
+    function loadTips() {
+      window.location.href = "tips.html";
     }
     
       init();

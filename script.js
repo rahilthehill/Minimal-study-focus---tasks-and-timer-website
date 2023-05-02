@@ -18,16 +18,10 @@
 //   ];
   
 const taskList = [
-  { task: "Pomodoro 1 - Paper 1 Questions - Focus on answering 10 paper 1 questions with no distractions", duration: 25 },
-  { task: "Short Break - Take a 10-minute break to rest, stretch, or grab a snack", duration: 10 },
-  { task: "Pomodoro 2 - Paper 1 Questions - Focus on answering another 10 paper 1 questions with no distractions", duration: 25 },
-  { task: "Short Break - Take a 10-minute break to rest, stretch, or do something you enjoy", duration: 10 },
-  { task: "Pomodoro 3 - Paper 1 Questions - Focus on answering another 10 paper 1 questions with no distractions", duration: 25 },
-  { task: "Short Break - Take a 15-minute break to rest, stretch, or do something you enjoy", duration: 15 },
-  { task: "Pomodoro 4 - Revision/Paper 3 Questions - Focus on answering as many questions as possible within the hour, with no distractions", duration: 60 },
-  { task: "Short Break - Take a 10-minute break to rest, stretch, or do something you enjoy", duration: 10 },
-  { task: "Pomodoro 5 - Revision/Paper 3 Questions - Focus on answering as many questions as possible within the 30 minutes, with no distractions", duration: 30 },
-  { task: "Personal Time - Use this time to watch a show or YouTube video, relax, or do something you enjoy", duration: 30 },
+  { task: "1 Hour session", duration: 60 },
+  { task: "15 Minute break", duration: 10 },
+  { task: "30 Minute session", duration: 30 },
+  { task: "10 Minute break", duration: 10 },
 ];
 
   //index 1
